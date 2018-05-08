@@ -18,7 +18,9 @@ def prep():
     #init slack
     from slackclient import SlackClient
     print("imports done")
-    SLACK_TOKEN = "xoxp-338575959890-338575960066-338744277589-d6efd2e1be5d51933e57cca08f6712b0"
+    SLACK_TOKEN = "None"
+    with open("token.txt") as f:
+    	SLACK_TOKEN = f.readline().strip()
     SLACK_CHANNEL = "#housing"
     SLACK_CHANNEL_repeat = "#repeats"
     sc = SlackClient(SLACK_TOKEN)

@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 lastCount += out
             except Exception as e:
                 pass
-        minutesToWait = max(15 - lastCount/20,8)
+        minutesToWait = int(max(15 - lastCount/20,8))
         for minute in range(minutesToWait):
         	print("%s minutes until next scrape" % (minutesToWait - minute))
         	time.sleep(1*60)

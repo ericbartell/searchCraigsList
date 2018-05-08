@@ -2597,3 +2597,7 @@ scraped 0 new posts; found 0 good posts, 0 reposts, and 0 that match our dates!
 scraped 60 new posts; found 4 good posts, 2 reposts, and 1 that match our dates!
 scraped 0 new posts; found 0 good posts, 0 reposts, and 0 that match our dates!
 scraped 74 new posts; found 3 good posts, 0 reposts, and 0 that match our dates!
+scraped 20 new posts; found 1 good posts, 6 reposts, and 0 that match our dates!
+scraped 1 new posts; found 0 good posts, 0 reposts, and 0 that match our dates!
+scraped 0 new posts; found 0 good posts, 0 reposts, and 0 that match our dates!
+scraped 0 new posts; found 0 good posts, 0 reposts, and 0 that match our dates!
