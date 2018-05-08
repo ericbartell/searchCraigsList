@@ -186,8 +186,8 @@ def do_scrape(args):
                         flags = "-repeat-" + flags
                         different = False
                         if result["price"] != ids[result[item]][0]:
-                            same = True
-                            different = "-cheaperBy $%s-" % (int(ids[result[item]][0].split("$")[1]) - int(result["price"].split("$")[1])) + flags
+                            different = True
+                            flags = "-cheaperBy $%s-" % (int(ids[result[item]][0].split("$")[1]) - int(result["price"].split("$")[1])) + flags
                             ids[result[item]] = [result["price"], date]
                         if date != ids[result[item]][1]:
                             different = True
