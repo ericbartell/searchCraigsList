@@ -111,6 +111,7 @@ def do_scrape(args):
     newestResultId = None
     print("searching")
     for result in results:
+        result['name'] = ''.join([i if ord(i) < 128 else ' ' for i in result['name']])
         #wtf slow downnnnn
         time.sleep(1)
         #print(result['id'])
