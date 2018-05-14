@@ -177,6 +177,15 @@ def do_scrape(args):
                 moveDate = soup.find('span', attrs={'class': "housing_movein_now property_date shared-line-bubble"})
                 splitDate = moveDate.text.strip().split(' ')
                 date = ' '.join(splitDate[1:])
+                laundryInUnit = False
+                laundry1 = soup.find_all('p', attrs={'class': "attrgroup"})
+                for i in laundry1:
+                    for string in i.strings:
+                        if "w/d in unit" in string:
+                            print("halleloughsoeursjgn")
+                            laundryInUnit = True
+                            flags = "--w/d in unit--" + flags
+                            break
                 flags = date + flags
                 notRepeat = True
                 print(result)
@@ -226,6 +235,8 @@ def do_scrape(args):
                     if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
                         goodDates += 1
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
+                    if laundryInUnit:
+                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
                 
                 else:
                     desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
