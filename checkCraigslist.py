@@ -62,9 +62,12 @@ def do_scrape(args):
         #    ids.add(str(line.strip()))
     with open(newFileName,'r') as f:
         for line in f:
-            splitline = line.strip().split("{}")
-            ids[splitline[0]] = [splitline[2],splitline[3]] #ID: price, date
-            ids[splitline[1]] = [splitline[2],splitline[3]] #name: price, date
+            try:
+                splitline = line.strip().split("{}")
+                ids[splitline[0]] = [splitline[2],splitline[3]] #ID: price, date
+                ids[splitline[1]] = [splitline[2],splitline[3]] #name: price, date
+            except Exception as e:
+                pass
     
     print("loaded files")
 
@@ -173,7 +176,7 @@ def do_scrape(args):
                 soup = bs(request.content, 'html.parser')
                 #page = urlopen(thisUrl)
                 #soup = bs(page, 'html.parser')
-                #print(soup)
+                print(soup)
                 moveDate = soup.find('span', attrs={'class': "housing_movein_now property_date shared-line-bubble"})
                 splitDate = moveDate.text.strip().split(' ')
                 date = ' '.join(splitDate[1:])
