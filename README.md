@@ -25,7 +25,9 @@ To set up:
 
 2c. Edit line 238 to match your move in dates
 
-2d. Add additional filters if necessary, around line 180. The stripped html lives in "soup" eg. line 180
+2d. Add additional filters if necessary, around line 180. The stripped html lives in "soup" eg. line 180.
+
+2e. checkCraigslist_yuriy.py has a couple useful functions, including manhattan distance.
 
 
 Open a command line window. Move to the repository, and run runCheckCraigslist.py.
