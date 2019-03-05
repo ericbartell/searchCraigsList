@@ -73,12 +73,12 @@ def do_scrape(args):
 
 
     from craigslist import CraigslistHousing
-    cl = CraigslistHousing(site='boston', area='gbs', category='hhh',
-                             filters={'max_price': 1700, 'min_price': 800, 'max_bedrooms': 4,
-                                      'min_bedrooms': 0, 'bundle_duplicates':True})
+    cl = CraigslistHousing(site='boston', area='gbs', category='aap',
+                             filters={'max_price': 2501, 'min_price': 1600, 'max_bedrooms': 2,
+                                      'min_bedrooms': 1, 'bundle_duplicates':True})
     
 
-    results = cl.get_results(sort_by='newest', geotagged=True, limit=200)
+    results = cl.get_results(sort_by='newest', geotagged=True, limit=400)
 
     print("cl prepped")
 
@@ -178,12 +178,8 @@ def do_scrape(args):
                 #soup = bs(page, 'html.parser')
                 print(soup)
                 moveDate = soup.find('span', attrs={'class': "housing_movein_now property_date shared-line-bubble"})
-                if moveDate != None:
-                    splitDate = moveDate.text.strip().split(' ')
-                    date = ' '.join(splitDate[1:])
-                else:
-                    date = "dnf"
-                    splitDate = "dnf"
+                splitDate = moveDate.text.strip().split(' ')
+                date = ' '.join(splitDate[1:])
                 laundryInUnit = False
                 laundry1 = soup.find_all('p', attrs={'class': "attrgroup"})
                 for i in laundry1:
@@ -212,11 +208,6 @@ def do_scrape(args):
                         notRepeat = notRepeat and different
                     else:
                         ids[result[item]] = [result["price"], date]
-
-                postType = result["url"].split("/gbs/")[1].split("/d/")[0]
-                if postType in ["hou","swp","off","prk","rea","rew","sha","sbw","vac"]:
-                	print("Type: %s. Skipping." % postType)
-                	continue
                 # if notRepeat:
                 # desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
                 # response = sc.api_call(
@@ -244,16 +235,11 @@ def do_scrape(args):
                     #if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
                     #    goodDates += 1
                     #    sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if (splitDate[1] == "mar") or (splitDate[1] == "apr" and int(splitDate[2]) > 1):
+                    if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
                         goodDates += 1
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
                     if laundryInUnit:
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
-                    if postType in ["roo","sub"]:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="man-woman-boy")
-                    if postType in ["fee","nfb",'abo']:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="woman")
-
                 
                 else:
                     desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])

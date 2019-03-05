@@ -1,7 +1,7 @@
 #####check urllib is good
 def runexit(newestResultId):
     if newestResultId != None:
-        with open("mostRecentListingID.txt", 'w') as f:
+        with open("mostRecentListingID_parking.txt", 'w') as f:
             f.write(newestResultId)
             print("wrote newest ID. looked at all newest posts.")
 def findLine(pt1, pt2):
@@ -19,7 +19,7 @@ def prep():
     from slackclient import SlackClient
     print("imports done")
     SLACK_TOKEN = "None"
-    with open("token.txt") as f:
+    with open("token_eb.txt") as f:
     	SLACK_TOKEN = f.readline().strip()
     SLACK_CHANNEL = "#housing"
     SLACK_CHANNEL_repeat = "#repeats"
@@ -41,7 +41,7 @@ def prep():
 #         break
 
 def do_scrape(args):
-    newFileName = "allGoodListingIDsAndNames_withPriceAndDate.txt"
+    newFileName = "allGoodListingIDsAndNames_withPriceAndDate_parking.txt"
     print("running")
     sc = args[0]
     import time
@@ -53,7 +53,7 @@ def do_scrape(args):
     #ids = args[6]
     requests = args[7]
     bs = args[8]
-    with open("mostRecentListingID.txt",'r') as f:
+    with open("mostRecentListingID_parking.txt",'r') as f:
         lastId = str(f.read().strip())
     newestResultId = lastId
     ids = {}
@@ -73,12 +73,10 @@ def do_scrape(args):
 
 
     from craigslist import CraigslistHousing
-    cl = CraigslistHousing(site='boston', area='gbs', category='hhh',
-                             filters={'max_price': 1700, 'min_price': 800, 'max_bedrooms': 4,
-                                      'min_bedrooms': 0, 'bundle_duplicates':True})
-    
+    cl = CraigslistHousing(site='boston', area='gbs', category='prk')
+                             #filters={'max_price': 50, 'min_price': 250})#, 'bundle_duplicates':True})
 
-    results = cl.get_results(sort_by='newest', geotagged=True, limit=200)
+    results = cl.get_results(sort_by='newest', limit=100)
 
     print("cl prepped")
 
@@ -132,14 +130,6 @@ def do_scrape(args):
             newestResultId = result['id']
         # filter
         try:
-            kitchenFlag = False
-            if "studio" in result['name'].lower():
-                continue
-            if "kitchen" in result['name'].lower() or "granite" in result['name'].lower() or "open" in result['name'].lower():
-                kitchenFlag = True
-            #if re.search('4/|-1',result['name'].lower()) or re.search('5/|-1',result['name'].lower()) or \
-            #                'april' in result['name'].lower() or 'may' in result['name'].lower():
-            #    flags += "-BEWARE early date-"
             bad = True
             if result["geotag"] != None:
                 a, b = result["geotag"]
@@ -169,6 +159,9 @@ def do_scrape(args):
                     bad = False
                 else:
                     continue
+            if "parking" not in result['name'].lower():
+                bad = True
+                print("not parking")
             if not bad:
                 thisUrl = result['url']
                 #print(thisUrl)
@@ -184,15 +177,6 @@ def do_scrape(args):
                 else:
                     date = "dnf"
                     splitDate = "dnf"
-                laundryInUnit = False
-                laundry1 = soup.find_all('p', attrs={'class': "attrgroup"})
-                for i in laundry1:
-                    for string in i.strings:
-                        if "w/d in unit" in string:
-                            print("halleloughsoeursjgn")
-                            laundryInUnit = True
-                            flags = "--w/d in unit--" + flags
-                            break
                 flags = date + flags
                 notRepeat = True
                 print(result)
@@ -201,10 +185,6 @@ def do_scrape(args):
                         repostCount += 1
                         flags = "-repeat-" + flags
                         different = False
-                        if result["price"] != ids[result[item]][0]:
-                            different = True
-                            flags = "-cheaperBy $%s-" % (int(ids[result[item]][0].split("$")[1]) - int(result["price"].split("$")[1])) + flags
-                            ids[result[item]] = [result["price"], date]
                         if date != ids[result[item]][1]:
                             different = True
                             flags = "-dateChange-" + flags
@@ -212,11 +192,6 @@ def do_scrape(args):
                         notRepeat = notRepeat and different
                     else:
                         ids[result[item]] = [result["price"], date]
-
-                postType = result["url"].split("/gbs/")[1].split("/d/")[0]
-                if postType in ["hou","swp","off","prk","rea","rew","sha","sbw","vac"]:
-                	print("Type: %s. Skipping." % postType)
-                	continue
                 # if notRepeat:
                 # desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
                 # response = sc.api_call(
@@ -244,16 +219,11 @@ def do_scrape(args):
                     #if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
                     #    goodDates += 1
                     #    sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if (splitDate[1] == "mar") or (splitDate[1] == "apr" and int(splitDate[2]) > 1):
+                    if (splitDate[1] == "apr") or (splitDate[1] == "mar" and int(splitDate[2]) > 1):
                         goodDates += 1
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if laundryInUnit:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
-                    if postType in ["roo","sub"]:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="man-woman-boy")
-                    if postType in ["fee","nfb",'abo']:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="woman")
-
+                    if ((result["price"] != None) and (float(result["price"].strip("$")) < 200)):
+                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="heavy_dollar_sign")
                 
                 else:
                     desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
