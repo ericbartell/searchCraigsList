@@ -8,7 +8,9 @@ Use: run in background on computer. Every <10> minutes script will look at new p
 To set up:
 
 0a. Clone this repository.
+
 0b. Install https://github.com/slackapi/python-slackclient with `pip install slackclient`
+
 0c. Install https://pypi.org/project/python-craigslist/ with `pip install python-craigslist`
 
 
