@@ -247,8 +247,8 @@ def do_scrape(args):
                     if (splitDate[1] == "mar") or (splitDate[1] == "apr" and int(splitDate[2]) > 1):
                         goodDates += 1
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if laundryInUnit:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
+                    # if laundryInUnit:
+                    #     sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
                     if postType in ["roo","sub"]:
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="man-woman-boy")
                     if postType in ["fee","nfb",'abo']:
