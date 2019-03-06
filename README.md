@@ -25,7 +25,7 @@ To set up:
 
 2a. Edit lines 77-78 for price and size, line 76 for general location (boston, cambridge)
 
-2b. Edit line 86-90 and 99-100 to define your ideal region, and line 165 to use geotags.
+2b. Edit line 86-90 and 99-100 to define your ideal region, and line 165 to use geotags. https://www.daftlogic.com/projects-google-maps-distance-calculator.htm# is useful for mapping points, or google maps!
 
 2c. Edit line 238 to match your move in dates
 
