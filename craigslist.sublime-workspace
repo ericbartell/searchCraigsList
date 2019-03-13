@@ -1,0 +1,1425 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wi",
+				"windowSize"
+			],
+			[
+				"split",
+				"splitDate\tstatement"
+			],
+			[
+				"last",
+				"lastBegin\tstatement"
+			],
+			[
+				"data",
+				"datasetBottomChrom\tstatement"
+			],
+			[
+				"loc",
+				"locusDataBottom\tstatement"
+			],
+			[
+				"chrom",
+				"chromMin1\tstatement"
+			],
+			[
+				"chr",
+				"chrCol1"
+			],
+			[
+				"marker",
+				"markerNameCol1"
+			],
+			[
+				"cond",
+				"protConditionNumber"
+			],
+			[
+				"spec",
+				"specificPheno1"
+			],
+			[
+				"prot",
+				"protConditionNumber"
+			],
+			[
+				"in",
+				"infiles\tstatement"
+			],
+			[
+				"this",
+				"thispos"
+			],
+			[
+				"lineMarker",
+				"lineMarkerNameRaw\tstatement"
+			],
+			[
+				"im",
+				"importantLoci"
+			],
+			[
+				"line",
+				"lineCount"
+			],
+			[
+				"compar",
+				"comparison"
+			],
+			[
+				"Het",
+				"HetChiSq"
+			],
+			[
+				"incl",
+				"incl-rsids"
+			],
+			[
+				"log",
+				"logTail"
+			],
+			[
+				"skip",
+				"skiprows\tparam"
+			],
+			[
+				"snp",
+				"snpDf\tparam"
+			],
+			[
+				"grep",
+				"grepVal"
+			],
+			[
+				"fie",
+				"filename"
+			],
+			[
+				"plo",
+				"plotLocus"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"gene",
+				"geneLocations"
+			],
+			[
+				"Intact",
+				"Intact_IGFBP3"
+			],
+			[
+				"Bio",
+				"BioActiveIGF1"
+			],
+			[
+				"Tota",
+				"Total_IGFBP3"
+			],
+			[
+				"Total",
+				"Total_IGF1"
+			],
+			[
+				"annotat",
+				"annotations\tstatement"
+			],
+			[
+				"ann",
+				"annotateSnp\tfunction"
+			],
+			[
+				"ano",
+				"annotation\tstatement"
+			],
+			[
+				"is",
+				"isSnpInBed\tfunction"
+			],
+			[
+				"sn",
+				"snpChr\tparam"
+			],
+			[
+				"li",
+				"listOfLists\tparam"
+			],
+			[
+				"int",
+				"intronDict\tstatement"
+			],
+			[
+				"na",
+				"na_values\tparam"
+			],
+			[
+				"merged",
+				"mergePhenoAndSampleFile"
+			],
+			[
+				"speci",
+				"specificPheno"
+			],
+			[
+				"mag",
+				"magYlabel\tstatement"
+			],
+			[
+				"inv",
+				"invalidPairs\tstatement"
+			],
+			[
+				"num",
+				"numLeaveOuts"
+			],
+			[
+				"mainM",
+				"mainMean"
+			],
+			[
+				"chunk",
+				"chunkSize"
+			],
+			[
+				"gws",
+				"gws_p\tstatement"
+			],
+			[
+				"l",
+				"linesRead\tstatement"
+			],
+			[
+				"findMe",
+				"findMedian\tfunction"
+			],
+			[
+				"find",
+				"findMLE\tfunction"
+			],
+			[
+				"sta",
+				"standardErrorHat"
+			],
+			[
+				"findM",
+				"findMLE"
+			],
+			[
+				"sort",
+				"sortedDf\tstatement"
+			],
+			[
+				"best",
+				"bestWordCoef\tstatement"
+			],
+			[
+				"spl",
+				"splitLine\tstatement"
+			],
+			[
+				"raw",
+				"rawTextFile\tstatement"
+			],
+			[
+				"fi",
+				"fieldNumbers"
+			],
+			[
+				"he",
+				"height_assoc"
+			],
+			[
+				"gee",
+				"geneName\tstatement"
+			],
+			[
+				"pheno",
+				"phenoList"
+			],
+			[
+				"check",
+				"check_output\tfunction"
+			],
+			[
+				"read",
+				"readline\tfunction"
+			],
+			[
+				"off",
+				"offset\tstatement"
+			],
+			[
+				"offset",
+				"offsetCounter\tstatement"
+			],
+			[
+				"pvalCol",
+				"pvalColumnNumber"
+			],
+			[
+				"combine",
+				"_combined"
+			],
+			[
+				"lamb",
+				"lambdaGC"
+			],
+			[
+				"amb",
+				"Ambiguous"
+			],
+			[
+				"ambi",
+				"ambiguous-alleles"
+			],
+			[
+				"sp",
+				"specificPheno"
+			],
+			[
+				"Om",
+				"OMINI5_A"
+			],
+			[
+				"affy",
+				"Affy6_na34"
+			],
+			[
+				"datas",
+				"dataset2\tstatement"
+			],
+			[
+				"make",
+				"make-bed"
+			],
+			[
+				"prun",
+				"prune"
+			],
+			[
+				"S",
+				"SGE_TASK_ID"
+			],
+			[
+				"indi",
+				"indivsWithFamilies_correct"
+			],
+			[
+				"ch",
+				"chrom"
+			],
+			[
+				"bed",
+				"bedFile"
+			],
+			[
+				"JOB",
+				"JOB_NAME"
+			],
+			[
+				"bgen",
+				"bgenStartFile"
+			],
+			[
+				"missing",
+				"missingness"
+			],
+			[
+				"bg",
+				"bgenStartFile"
+			],
+			[
+				"PH",
+				"PHENOFILEUSE"
+			],
+			[
+				"save",
+				"saveFile"
+			],
+			[
+				"un",
+				"unrelatedsOnly"
+			],
+			[
+				"hap",
+				"hapFile"
+			],
+			[
+				"fa",
+				"family"
+			],
+			[
+				"fam",
+				"familyDict"
+			],
+			[
+				"found",
+				"foundFamId"
+			],
+			[
+				"foun",
+				"foundFamId"
+			],
+			[
+				"oth",
+				"other2"
+			],
+			[
+				"other",
+				"other1"
+			],
+			[
+				"id",
+				"idToFamId"
+			],
+			[
+				"re",
+				"relateds"
+			],
+			[
+				"o",
+				"otherInd2"
+			],
+			[
+				"ind",
+				"individual"
+			],
+			[
+				"heigh",
+				"heightDict"
+			],
+			[
+				"get",
+				"getFamID"
+			],
+			[
+				"print",
+				"printed"
+			],
+			[
+				"con",
+				"contents"
+			],
+			[
+				"relate",
+				"relatedVar"
+			],
+			[
+				"unre",
+				"unrelatedsIndex"
+			],
+			[
+				"geno",
+				"genoDataFolder"
+			],
+			[
+				"f",
+				"filename"
+			],
+			[
+				"list",
+				"listdir"
+			],
+			[
+				"key",
+				"keyhg19"
+			],
+			[
+				"lif",
+				"liftoverMap"
+			],
+			[
+				"corr",
+				"correctGenos"
+			],
+			[
+				"var",
+				"variantDict"
+			],
+			[
+				"not",
+				"notRepeat"
+			],
+			[
+				"good",
+				"goodDates"
+			],
+			[
+				"min",
+				"minutesToWait"
+			],
+			[
+				"mi",
+				"minutesToWait"
+			],
+			[
+				"prep",
+				"prepOutput"
+			],
+			[
+				"SL",
+				"SLACK_CHANNEL"
+			],
+			[
+				"done",
+				"donePruning"
+			],
+			[
+				"ht",
+				"heightIncAllele_bn"
+			],
+			[
+				"height",
+				"heightIncAllele"
+			],
+			[
+				"to",
+				"totalSnps"
+			],
+			[
+				"pv",
+				"pvalEnd"
+			],
+			[
+				"oc",
+				"occupiedRegions_thisChrom"
+			],
+			[
+				"pop",
+				"popnames"
+			],
+			[
+				"allel",
+				"alleleFreqs"
+			],
+			[
+				"broadf",
+				"broadFiles"
+			],
+			[
+				"test",
+				"testSnpsFileSDSHeight"
+			],
+			[
+				"repo",
+				"reponame"
+			],
+			[
+				"GW",
+				"GWAS_Results"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_go_serialConditioning.sh",
+			"settings":
+			{
+				"buffer_size": 1010,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_miami.py",
+			"settings":
+			{
+				"buffer_size": 10366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning1.sh",
+			"settings":
+			{
+				"buffer_size": 18450,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning2.sh",
+			"settings":
+			{
+				"buffer_size": 17798,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_go_UKB_htShLegSHR.sh",
+			"settings":
+			{
+				"buffer_size": 1242,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_script_UKB_runBolt.sh",
+			"settings":
+			{
+				"buffer_size": 1918,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_runBolt_subset.sh",
+			"settings":
+			{
+				"buffer_size": 3087,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z046_go_calculateAfs.sh",
+			"settings":
+			{
+				"buffer_size": 814,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z040_QQ.py",
+			"settings":
+			{
+				"buffer_size": 4360,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/betaWinnersCurseCorrection.py",
+			"settings":
+			{
+				"buffer_size": 22103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z040_filterGWAS_alternateWC.sh",
+			"settings":
+			{
+				"buffer_size": 8662,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/consolidateSortedRanges.py",
+			"settings":
+			{
+				"buffer_size": 1697,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 245.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 922.0
+	},
+	"console":
+	{
+		"height": 270.0,
+		"history":
+		[
+			"ShellScriptImproved",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ebartell/Desktop/Desktop/craigslist"
+	],
+	"file_history":
+	[
+		"/home/ebartell/Desktop/Desktop/craigslist/runCheckCraigslist_eb.py",
+		"/home/ebartell/Desktop/Desktop/craigslist/checkCraigslist_eb.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/secondThreshold",
+		"/home/ebartell/.bashrc",
+		"/home/ebartell/Desktop/Desktop/craigslist/checkCraigslist.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_miami.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning2.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_runBolt_subset.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/convertVcfToTransposedDosages.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_go_UKB_htShLegSHR.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_go_UKB_htShLegSHR_subset.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_script_UKB_runBolt.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z051_manhattan_Meta.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_tmp_Total_IGFBP3_ALL_cond1_ukb4.tsv",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_tmp_Total_IGFBP3_ALL_cond1_ukb2.tsv",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_tmp_Total_IGFBP3_ALL_cond1_ukb3.tsv",
+		"/home/ebartell/broadFiles/ebartell/dauber/z051_go_filterPlotMeta.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z040_go_filterPlotGWAS.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z030_script_Cin_proteinLevels_plink.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z020_fx_Cin_proteinLevels_dataPrep.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_doubleSidedManhatta.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning.sh",
+		"/home/ebartell/Desktop/Desktop/craigslist/checkCraigslist",
+		"/home/ebartell/Desktop/Desktop/craigslist/z100_script_serialConditioning.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_tmp_Total_IGFBP3_ALL_cond1_ukb.tsv",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_tmp__cond_ukb.tsv",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/mergePhenoAndSampleFile.py",
+		"/home/ebartell/Desktop/Desktop/craigslist/runCheckCraigslist.py",
+		"/home/ebartell/Desktop/Desktop/craigslist/allGoodListingIDsAndNames_withPriceAndDate.txt",
+		"/home/ebartell/Desktop/Desktop/craigslist/mostRecentListingID.txt",
+		"/home/ebartell/Desktop/Desktop/craigslist/mostRecentListingID_parking.txt",
+		"/home/ebartell/Desktop/Desktop/craigslist/runCheckCraigslist_parking.py",
+		"/home/ebartell/Desktop/Desktop/craigslist/checkCraigslist_parking.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_go_serialConditioning.sh",
+		"/home/ebartell/Desktop/Desktop/craigslist/.gitignore",
+		"/home/ebartell/Desktop/Desktop/craigslist/token.txt",
+		"/home/ebartell/broadFiles/ebartell/dauber/z053_annotateLeads.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/copySummStatsFilesToFileShare.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z051_metaAnalysis_analysis.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z051_go_filterPlotMeta.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/annotateSnps/z053_annotateLeads.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/zipDirec.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z045_conditional_runBolt_htShLegSHR.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z050_meta_ukbckb_runner.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/make_include_list.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/z011_script_makePheno.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/OMINI5_A/GWAS/zipDirec.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z040_filterGWAS_alternateWC.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z040_filterGWAS.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/zipTheBgenFiles.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z030_go_Cin_proteinLevels_onlyOverlap.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z050_meta_ukbckb_all_eb_general.par",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z041_clumpAndLambdaGC.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z040_manhattan_corrWGWAS.py",
+		"/home/ebartell/broadFiles/ebartell/forSailaja/prune_share_final.py",
+		"/forSailaja/prune_share_final.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/z010_makeSubset.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/z011_go_makePheno.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/GWASsim/z030_script_UKB_runBolt_sim.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/z010_go_makePheno.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_run",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ukbSubset/z010_makePheno.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_runSnpTest_subset.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z0ls",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z050_meta_ukbckb_all_for_lambda_eb_general.par",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z050_meta_w_ukbio_all_for_lambda_runner.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/z050_meta_w_ukbio_all_for_lambda_eb_Height_all.par",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/betaWinnersCurseCorrection.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z040_filterGWAS.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z030_script_Cin_proteinLevels_plink_onlyOverlap.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z025_mergeImputed.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z021_go_QCdataPrep_Afterimputation.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z030_go_Cin_proteinLevels.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/lookupRsidsTempFile.sql",
+		"/home/ebartell/broadFiles/ebartell/dauber/sqlCommandScript.sql",
+		"/home/ebartell/broadFiles/ebartell/dauber/z053_out_protein_expression_GWAS_results.csv",
+		"/home/ebartell/broadFiles/ebartell/hg19/getHg19.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z053_derivedSnps.csv.rsids",
+		"/home/ebartell/broadFiles/ebartell/dauber/lookupRsidFromPos.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/myLocusZoom.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z022_fx_Cin_proteinLevels_dataPrep_derived.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/rawData/z010_rawDataAnalysis.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z025_script_imputedDataDiagnostics.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z050_meta_w_ukbio_all_for_lambda_runner.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z046_go_calculateAfs.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z052_go_plotLocusZoom.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/rawData/CCHMC_Dauber_Including_IGF-II_results_final_results.csv",
+		"/cvar/jhlab/ebartell/forSailaja/prune_share_final.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z010_rawDataAnalysis.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/mergedImputed/merged_chr21-merge.missnp",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z040_filterGWAS",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z045_2_filterGWAS_cond.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z020_fx_delBMI_adjCov-invN_fixDataType.R",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/HLAtesting/myLocusZoom.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z045_conditionalAnalysis.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z045_conditional_launcher_htShLegSHR.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/HLAtesting/z040_filterGWAS_HLA.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/HLAtesting/myLocusZoom",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/HLAtesting/z040_filterGWAS.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/betaWinnersCurseCorrection.py",
+		"/home/ebartell/PycharmProjects/secretSanta2018-19_hvd/emails.csv",
+		"/home/ebartell/PycharmProjects/secretSanta2018-19_shire/emails.csv",
+		"/home/ebartell/PycharmProjects/secretSanta2018-19_shire/secretSanta2017-18.py",
+		"/home/ebartell/PycharmProjects/secretSanta2018-19_hvd/secretSanta2017-18.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/betaWinnersCurseCorrection_plotting.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z020_go_QCdataPrep_Cin_proteinLevels_noAmbig.sh",
+		"/media/ebartell/winData/classStuff/bst262/notes.txt",
+		"/media/ebartell/winData/classStuff/bst262/lab2/linreg/.travis.yml",
+		"/media/ebartell/winData/classStuff/bst262/lab2/notes.txt",
+		"/media/ebartell/winData/classStuff/Dnd/Notes",
+		"/home/ebartell/broadFiles/ebartell/dauber/z050_meta_dauber_all_for_lambda_runner.sh",
+		"/media/ebartell/winData/classStuff/hirschhornlab/abstractML/extractText.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z010_go_pullUkbData.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/checkIGF2.py",
+		"/home/ebartell/broadFiles/ebartell/shr/shrAnalysis2/checkTurchin/runSignTestv4.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z020_fx_QC.py",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_runBolt.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_go_UKB_htShLegSHR.sh",
+		"/home/ebartell/Downloads/w11898_20181016.csv",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/make_include_list.sh",
+		"/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/testQsubScript.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z051_out_clumpCounts_corrected.txt",
+		"/home/ebartell/Downloads/182522_0_other_1_pfkp5b.zip",
+		"/home/ebartell/.readme",
+		"/home/ebartell/broadFiles/ebartell/dauber/z021_script_calculateMafs.sh",
+		"/home/ebartell/broadFiles/ebartell/dauber/z020_fx_PCA_QC.py",
+		"/home/ebartell/broadFiles/ebartell/dauber/z040_manhattan_corrWGWAS.py",
+		"/home/ebartell/broadFiles/ebartell/forJess/heightAssocNull.py"
+	],
+	"find":
+	{
+		"height": 77.0
+	},
+	"find_in_files":
+	{
+		"height": 259.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sig.clumped",
+			"localBest",
+			"awk",
+			"\t",
+			"flags",
+			"bs",
+			"\t",
+			"splitDate",
+			"check",
+			"\t",
+			"ss",
+			"sys",
+			"os",
+			".txt",
+			"printf",
+			"\"%02.f\"",
+			"printf",
+			"bgen.bgi",
+			"_v3.",
+			"-i",
+			"imputed/",
+			"conditionnumber",
+			"21",
+			"12",
+			"protConditionNumber",
+			"summStatsChrom",
+			"end",
+			"args.pval",
+			"chrCol1",
+			"pearsonr",
+			"alleles",
+			"loadA",
+			"z100",
+			"7",
+			"z100",
+			"Total_IGFBP3_ALL",
+			"\t",
+			"convertVcfToTransposedDosages",
+			"EDIT ",
+			"z100_tmp_${specificPheno2}_cond${protConditionNumber}_Cin_ukbFormat.tsv",
+			"cond1",
+			"cond0",
+			"-i",
+			"sc",
+			"\t",
+			"newgenofile",
+			"csv",
+			".",
+			".fam",
+			"sns",
+			"csv",
+			"proteinConditionNumber",
+			"goodcount",
+			"goodDates",
+			"star",
+			"price",
+			"lastId",
+			".txt",
+			"check",
+			".py",
+			".txt",
+			"if post",
+			"date",
+			"read",
+			"title",
+			"thresh",
+			"othercol",
+			"apply",
+			"occupiedRegions",
+			"log",
+			"axarr",
+			"hist",
+			"%",
+			"sim",
+			"tab",
+			"unfiltere",
+			"${strata}_corrected",
+			"corrected_comb",
+			"    ",
+			"geneName",
+			"summStatsFile",
+			"summstats",
+			"exit",
+			"small",
+			"chr",
+			"pos",
+			"sh_all",
+			"magYlabel",
+			"summStats2",
+			"other",
+			"N",
+			"pd.read_c",
+			"pvalThreshold",
+			"k",
+			"verbose",
+			"import",
+			"os",
+			"os.",
+			"os",
+			"delta",
+			"delta_origina",
+			"skipHeader",
+			"rsid",
+			"read_csv",
+			"\"| estimate | - | Repl_beta |\"",
+			"log",
+			"merged",
+			"merfed",
+			"log",
+			"ns_p",
+			"    ",
+			"pearsonr",
+			"box",
+			"ns",
+			"gws_p",
+			"exit",
+			"log",
+			"()\n",
+			"exit",
+			"cutoff",
+			"findMSE",
+			"special",
+			"testd",
+			"head",
+			"windows",
+			"shape",
+			"outFam",
+			"temp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    ",
+			" ",
+			"    ",
+			"\t",
+			"\\t"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_go_serialConditioning.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								889,
+								889
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_miami.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3767,
+								3767
+							]
+						],
+						"settings":
+						{
+							"show_definitions": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1728.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning1.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12748,
+								12748
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/z100_script_serialConditioning2.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10563,
+								10563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4625.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_go_UKB_htShLegSHR.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z030_script_UKB_runBolt.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z030_script_UKB_runBolt_subset.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1587,
+								1587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z046_go_calculateAfs.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								417,
+								417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/z040_QQ.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2620,
+								2620
+							]
+						],
+						"settings":
+						{
+							"show_definitions": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/fileShare/Software/betaWinnersCurseCorrection.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9144,
+								9144
+							]
+						],
+						"settings":
+						{
+							"show_definitions": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5558.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/ebartell/broadFiles2/jhlab_ukbiobank/users/ebartell/ht_shr_leg_upperbody/subsetGwas/z040_filterGWAS_alternateWC.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4522,
+								4522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScriptImproved/Shell-Unix-Generic.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1824.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/home/ebartell/broadFiles/ebartell/dauber/serialConditioning/consolidateSortedRanges.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								854,
+								854
+							]
+						],
+						"settings":
+						{
+							"show_definitions": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 6,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 49.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 832.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "craigslist.sublime-project",
+	"replace":
+	{
+		"height": 90.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 1094.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 831.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 535.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

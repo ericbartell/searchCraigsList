@@ -1,7 +1,7 @@
 #####check urllib is good
 def runexit(newestResultId):
     if newestResultId != None:
-        with open("mostRecentListingID.txt", 'w') as f:
+        with open("mostRecentListingID_eb.txt", 'w') as f:
             f.write(newestResultId)
             print("wrote newest ID. looked at all newest posts.")
 def findLine(pt1, pt2):
@@ -19,15 +19,15 @@ def prep():
     from slackclient import SlackClient
     print("imports done")
     SLACK_TOKEN = "None"
-    with open("token.txt") as f:
-    	SLACK_TOKEN = f.readline().strip()
+    with open("token_eb.txt") as f:
+        SLACK_TOKEN = f.readline().strip()
     SLACK_CHANNEL = "#housing"
     SLACK_CHANNEL_repeat = "#repeats"
     sc = SlackClient(SLACK_TOKEN)
     print("slack prepped")
     
     args = [sc, "holder", SLACK_TOKEN, SLACK_CHANNEL, SLACK_CHANNEL_repeat,"lastId",
-        "ids",requests,bs]
+        "ids",requests,bs,re]
     return args
 
 # def testFn():
@@ -39,9 +39,20 @@ def prep():
 #     for result in results:
 #         print(result['id'])
 #         break
+'''
+To implement:
+remove fenway?
+removes: "raymond ng","randy horn": implemented
+improved dating: implemented
+
+'''
+
+
+
+
 
 def do_scrape(args):
-    newFileName = "allGoodListingIDsAndNames_withPriceAndDate.txt"
+    newFileName = "allGoodListingIDsAndNames_withPriceAndDate_eb.txt"
     print("running")
     sc = args[0]
     import time
@@ -53,7 +64,8 @@ def do_scrape(args):
     #ids = args[6]
     requests = args[7]
     bs = args[8]
-    with open("mostRecentListingID.txt",'r') as f:
+    re = args[9]
+    with open("mostRecentListingID_eb.txt",'r') as f:
         lastId = str(f.read().strip())
     newestResultId = lastId
     ids = {}
@@ -73,12 +85,14 @@ def do_scrape(args):
 
 
     from craigslist import CraigslistHousing
+    # print("here")
     cl = CraigslistHousing(site='boston', area='gbs', category='aap',
                              filters={'max_price': 2501, 'min_price': 1600, 'max_bedrooms': 2,
                                       'min_bedrooms': 1, 'bundle_duplicates':True})
     
 
-    results = cl.get_results(sort_by='newest', geotagged=True, limit=400)
+    # print("here")
+    results = cl.get_results(sort_by='newest', geotagged=True, limit=1000)
 
     print("cl prepped")
 
@@ -121,7 +135,7 @@ def do_scrape(args):
         time.sleep(1)
         #print(result['id'])
         #prep, pre-checks
-        if totalCount % 10 ==0:
+        if totalCount % 1 ==0:
             print(totalCount)
         repeat=False
         if result['id'] == lastId:############################
@@ -178,8 +192,33 @@ def do_scrape(args):
                 #soup = bs(page, 'html.parser')
                 print(soup)
                 moveDate = soup.find('span', attrs={'class': "housing_movein_now property_date shared-line-bubble"})
-                splitDate = moveDate.text.strip().split(' ')
-                date = ' '.join(splitDate[1:])
+                mainText = soup.find('section', attrs={'id': "postingbody"}).text
+                title = soup.find("span", attrs={'id':"titletextonly"}).text
+
+                if moveDate != None:
+                    splitDate = moveDate.text.strip().split(' ')
+                    date = ' '.join(splitDate[1:])
+                else:
+                    dates = ["0?1|jan","0?2|feb","0?3|mar","0?4|apr","0?5|may","0?6|jun","0?7|jul","0?8|aug","0?9|sep","10|oct","11|nov","12|dec","NOW|now"]
+                    splitDate = []
+                    for thisDate in dates:
+                        if len(re.compile("avail(able)?( date)?:? (%s)" % thisDate).findall(mainText.lower())) > 0:
+                            date = thisDate.split("|")[1]
+                            splitDate = [date,date]
+                        if len(re.compile("avail(able)?( date)?:? (%s)" % thisDate).findall(title.lower())) > 0:
+                            date = thisDate.split("|")[1]
+                            splitDate = [date,date]
+                    if len(splitDate) == 0:
+                        date = "dnf"
+                        splitDate = ["dnf","dnf"]
+                badKeywords = ["raymond ng","randy horn"]
+                for keyword in badKeywords:
+                    if keyword in mainText.lower():
+                        print("%s in mainText. skipping." % keyword)
+                        bad = True
+                if bad:
+                    continue
+
                 laundryInUnit = False
                 laundry1 = soup.find_all('p', attrs={'class': "attrgroup"})
                 for i in laundry1:
@@ -189,7 +228,7 @@ def do_scrape(args):
                             laundryInUnit = True
                             flags = "--w/d in unit--" + flags
                             break
-                flags = date + flags
+                flags = "*" + date + "*" + flags
                 notRepeat = True
                 print(result)
                 for item in ['id','name']:
@@ -235,7 +274,7 @@ def do_scrape(args):
                     #if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
                     #    goodDates += 1
                     #    sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
+                    if (splitDate[1] == "jul") or (splitDate[1] == "jun") or (splitDate[1] == "may") or (splitDate[1] == "apr"):
                         goodDates += 1
                         sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
                     if laundryInUnit:
@@ -253,9 +292,9 @@ def do_scrape(args):
         except NameError as e:
             print("here...?")
             if "not a valid area" in e:
-            	print("awwww f***")
-            	sc.api_call("chat.postMessage",channel="#logging", text="Likely IP ban.",username='pybot', icon_emoji=':robot_face:')
-            	break
+                print("awwww f***")
+                sc.api_call("chat.postMessage",channel="#logging", text="Likely IP ban.",username='pybot', icon_emoji=':robot_face:')
+                break
             print(e)
             continue
 

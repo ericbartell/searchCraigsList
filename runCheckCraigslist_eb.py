@@ -31,7 +31,7 @@ def timeout(timeout):
     return deco
 
 if __name__ == "__main__":
-    from checkCraigslist import *
+    from checkCraigslist_eb import *
     prepOutput = prep()
     #print(prepOutput)
     #exit()
@@ -40,19 +40,19 @@ if __name__ == "__main__":
         lastCount = 0
         out="temp"
         try:
-            from checkCraigslist import do_scrape
-            func = timeout(timeout=10*60)(do_scrape)
+            from checkCraigslist_eb import do_scrape
+            func = timeout(timeout=30*60)(do_scrape)
             out = func(prepOutput)
         except KeyboardInterrupt:
             print("Exiting....")
             sys.exit(1)
         except Exception as exc:
+            if "not a valid area" in str(exc):
+                print("awwww f***")
+                break
             if "timeout" in str(exc):
                 print("timeout, rerunning")
                 continue
-            if "not a valid area" in exc:
-            	print("awwww f***")
-            	break
             print("Error with the scraping:", sys.exc_info()[0])
             traceback.print_exc()
             continue
