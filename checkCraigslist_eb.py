@@ -190,7 +190,7 @@ def do_scrape(args):
                 soup = bs(request.content, 'html.parser')
                 #page = urlopen(thisUrl)
                 #soup = bs(page, 'html.parser')
-                print(soup)
+                #print(soup)
                 moveDate = soup.find('span', attrs={'class': "housing_movein_now property_date shared-line-bubble"})
                 mainText = soup.find('section', attrs={'id': "postingbody"}).text
                 title = soup.find("span", attrs={'id':"titletextonly"}).text
