@@ -87,7 +87,7 @@ def do_scrape(args):
     from craigslist import CraigslistHousing
     # print("here")
     cl = CraigslistHousing(site='boston', area='gbs', category='aap',
-                             filters={'max_price': 2501, 'min_price': 1600, 'max_bedrooms': 2,
+                             filters={'max_price': 2401, 'min_price': 1600, 'max_bedrooms': 2,
                                       'min_bedrooms': 1, 'bundle_duplicates':True})
     
 
@@ -103,15 +103,31 @@ def do_scrape(args):
     beaconWest = (42.343926, -71.127147)
     pondSouth = (42.327430, -71.119658)
 
+    #define lines
+    pointPairs = [[misHil, fen, 'pos'],[fen, beaconEast, 'pos'], #
+                  [beaconWest, pondSouth, 'neg'],[beaconEast, beaconWest, 'neg'],[pondSouth, misHil, 'pos']]
+    #region 2
+    heathSt=(42.328013,-71.110316)
+    vandy=(42.336901,-71.102689)
+    brighamCircle=(42.348649,-71.100218)
+    allston=(42.347956,-71.127876)
+    washSqIsh=(42.335597,-71.129920)
+    highStHill=(42.327552,-71.119347)
+
+    #define lines
+    pointPairs = [[heathSt, vandy, 'pos'],[vandy, brighamCircle, 'pos'], #
+                  [brighamCircle, allston, 'neg'],[allston, washSqIsh, 'neg'],
+                  [washSqIsh, highStHill, 'neg'],[highStHill, heathSt, 'pos']]
+    #testPoints
+    #a,b = (42.338462,-71.115294) #good
+    #a,b = (42.342244,-71.130000) #bad
+
     #t-stops
     chestNutHill = (42.326864,-71.164454)
     reservoir = (42.334995,-71.148695)
     beaconsfield = (42.335706,-71.140379)
     brooklineHills = (42.331315,-71.126631)
 
-    #define lines
-    pointPairs = [[misHil, fen, 'pos'],[fen, beaconEast, 'pos'], #
-                  [beaconWest, pondSouth, 'neg'],[beaconEast, beaconWest, 'neg'],[pondSouth, misHil, 'pos']]
 
     circleCenters = [brooklineHills,beaconsfield,reservoir,chestNutHill]
     #pos, neg is intuitive, if above then good (unsure for vert/horizontal
@@ -127,6 +143,7 @@ def do_scrape(args):
     repostCount = 0
     totalCount = 0
     goodDates = 0
+    taggedAndPosted=0
     newestResultId = None
     print("searching")
     for result in results:
@@ -160,6 +177,7 @@ def do_scrape(args):
                 bad = False
                 for line in lineFilters:
                     calcVal = a*line[0] + line[1] - b
+                    #print(calcVal)
                     if (calcVal < 0 and line[2] == "pos") or (calcVal > 0 and line[2] == "neg"):
                         bad = True
                         #print(line)
@@ -198,6 +216,7 @@ def do_scrape(args):
                 if moveDate != None:
                     splitDate = moveDate.text.strip().split(' ')
                     date = ' '.join(splitDate[1:])
+                    tagged=True
                 else:
                     dates = ["0?1|jan","0?2|feb","0?3|mar","0?4|apr","0?5|may","0?6|jun","0?7|jul","0?8|aug","0?9|sep","10|oct","11|nov","12|dec","NOW|now"]
                     splitDate = []
@@ -231,6 +250,7 @@ def do_scrape(args):
                 flags = "*" + date + "*" + flags
                 notRepeat = True
                 print(result)
+                notRepeatWithNewPriceOrDate = True
                 for item in ['id','name']:
                     if result[item] in ids:
                         repostCount += 1
@@ -239,9 +259,11 @@ def do_scrape(args):
                         if result["price"] != ids[result[item]][0]:
                             different = True
                             flags = "-cheaperBy $%s-" % (int(ids[result[item]][0].split("$")[1]) - int(result["price"].split("$")[1])) + flags
+                            notRepeatWithNewPriceOrDate = False
                             ids[result[item]] = [result["price"], date]
                         if date != ids[result[item]][1]:
                             different = True
+                            notRepeatWithNewPriceOrDate = False
                             flags = "-dateChange-" + flags
                             ids[result[item]] = [result["price"], date]
                         notRepeat = notRepeat and different
@@ -267,18 +289,25 @@ def do_scrape(args):
                                     print("error writing")
                                     continue
                             pass
-                    desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
-                    response = sc.api_call(
-                        "chat.postMessage", channel=SLACK_CHANNEL, text=desc,
-                        username='pybot', icon_emoji=':robot_face:')
-                    #if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
-                    #    goodDates += 1
-                    #    sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if (splitDate[1] == "jul") or (splitDate[1] == "jun") or (splitDate[1] == "may") or (splitDate[1] == "apr"):
+                    #only post if good dates:
+                    if notRepeatWithNewPriceOrDate and ((splitDate[1] == "jul") or (splitDate[1] == "jun") or (splitDate[1] == "may") or (splitDate[1] == "apr") or (splitDate[1] == "now")):
+                        posted=True
+                        desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
+                        response = sc.api_call(
+                            "chat.postMessage", channel=SLACK_CHANNEL, text=desc,
+                            username='pybot', icon_emoji=':robot_face:')
+                        #if (splitDate[1] == "jul") or (splitDate[1] == "jun" and int(splitDate[2]) > 1):
+                        #    goodDates += 1
+                        #    sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
+                        #if notRepeatWithNewPriceOrDate and ((splitDate[1] == "jul") or (splitDate[1] == "jun") or (splitDate[1] == "may") or (splitDate[1] == "apr")):
                         goodDates += 1
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
-                    if laundryInUnit:
-                        sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
+                        if splitDate[1] == "now":
+                            sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="exclamation")
+                        else:
+                            sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="star")
+                        if laundryInUnit:
+                            sc.api_call("reactions.add",channel=str(response['channel']),timestamp=str(response['ts']),name="blond-haired-woman")
+                        taggedAndPosted += 1
                 
                 else:
                     desc = "{0} {1} | {2} | {3} | <{4}>".format(flags, result["price"], result["name"], result["geotag"], result["url"])
@@ -298,7 +327,7 @@ def do_scrape(args):
             print(e)
             continue
 
-    outmessage = "scraped %s new posts; found %s good posts, %s reposts, and %s that match our dates!" % (totalCount, goodCount, repostCount, goodDates)
+    outmessage = "scraped %s new posts; found %s good posts, %s reposts, and %s that match our dates! %s that were tagged and posted." % (totalCount, goodCount, repostCount, goodDates, taggedAndPosted)
     sc.api_call("chat.postMessage",channel="#logging", text=outmessage,username='pybot', icon_emoji=':robot_face:')
     print(outmessage)
     with open("clLog.txt", 'a') as f:

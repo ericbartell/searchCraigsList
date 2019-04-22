@@ -2,6 +2,7 @@ import time
 import sys
 import traceback
 
+sys.path.insert(0,"/home/unix/ebartell/craigslist/pylibs/lib/python3.6/site-packages/")
 from threading import Thread
 import functools
 
@@ -31,6 +32,7 @@ def timeout(timeout):
     return deco
 
 if __name__ == "__main__":
+    print(sys.path)
     from checkCraigslist_eb import *
     prepOutput = prep()
     #print(prepOutput)
